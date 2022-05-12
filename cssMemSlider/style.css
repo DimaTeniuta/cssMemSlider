@@ -1,5 +1,124 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background-color: #444444;
+}
+
+.container {
+  max-width: 100rem;
+  padding: 5% 0 0 0;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container > input {
+	display: none;
+}
+
+.slider {
+  margin: 0 auto;
+  width: 50rem;
+  overflow: hidden;
+
+}
+
+.images {
+  display: flex;
+  margin: 0 auto;
+  width: 50rem;
+}
+
+.img {
+  width: 50rem;
+  height: 100%;
+}
+
+#inp1:checked ~ .controls label:nth-of-type(1),
+#inp2:checked ~ .controls label:nth-of-type(2),
+#inp3:checked ~ .controls label:nth-of-type(3),
+#inp4:checked ~ .controls label:nth-of-type(4) {
+	background-color: inherit;
+}
+
+#inp1:checked ~ .slider > .images {
+  margin: 0;
+}
+
+#inp2:checked ~ .slider > .images {
+  margin: 0 0 0 -100%;
+}
+
+#inp3:checked ~ .slider > .images {
+  margin: 0 0 0 -200%;
+}
+
+#inp4:checked ~ .slider > .images {
+  margin: 0 0 0 -300%;
+}
+
+.images {
+  transition: all 600ms cubic-bezier(0.42,0,1,1);
+}
+
+#controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  max-width: 50rem;
+  margin: 2rem auto 0 auto;
+}
+
+
+#controls .baground-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+#controls label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #3369a6;
+  transition: 0.3s;
+}
+
+#controls .chaild-baground-label {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #444444;
+  border: 2px solid #3369a6;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#controls label:active {
+  background-color: #b8b6b6;
+}
+
+#controls label:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+#inp1:checked ~ #controls .chaild-baground-label1,
+#inp2:checked ~ #controls .chaild-baground-label2,
+#inp3:checked ~ #controls .chaild-baground-label3,
+#inp4:checked ~ #controls .chaild-baground-label4 {
+  opacity: 1;
+}
+

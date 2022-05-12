@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>cssMemSlider</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssMemSlider</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <input checked type="radio" name="radio" id="inp1" />
+      <input type="radio" name="radio" id="inp2" />
+      <input type="radio" name="radio" id="inp3" />
+      <input type="radio" name="radio" id="inp4" />
+
+      <div class="slider">
+        <div class="images">
+          <div class="slider1">
+            <img class="img img1" src="./assets/images/mem1.jpg" alt="img" />
+          </div>
+          <div class="slider2">
+            <img class="img img2" src="./assets/images/ded.jpg" alt="img" />
+          </div>
+          <div class="slider3">
+            <img class="img img3" src="./assets/images/steel.jpg" alt="img" />
+          </div>
+          <div class="slider4">
+            <img class="img img4" src="./assets/images/oscar.jpg" alt="img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="wrap-text">
+        <div class="text-picture text1"></div>
+        <div class="text-picture text2"></div>
+        <div class="text-picture text3"></div>
+        <div class="text-picture text4"></div> 
+      </div>
+
+      <div id="controls">
+        <label for="inp1">
+          <div class="baground-label">
+            <div class="chaild-baground-label1 chaild-baground-label"></div>
+          </div>
+        </label>
+        <label for="inp2">
+          <div class="baground-label">
+            <div class="chaild-baground-label2 chaild-baground-label"></div>
+          </div>
+        </label>
+        <label for="inp3">
+          <div class="baground-label">
+            <div class="chaild-baground-label3 chaild-baground-label"></div>
+          </div>
+        </label>
+        <label for="inp4">
+          <div class="baground-label">
+            <div class="chaild-baground-label4 chaild-baground-label"></div>
+          </div>
+        </label>
+      </div>
+    </div>
+  </body>
 </html>

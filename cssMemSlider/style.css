@@ -107,18 +107,23 @@ body {
   height: 1rem;
   border-radius: 50%;
   background-color: #444444;
-  border: 2px solid #3369a6;
+  border: 1px solid #3369a6;
+  box-sizing: border-box;
   opacity: 0;
   transition: 0.3s;
-}
-
-#controls label:active {
-  background-color: #b8b6b6;
 }
 
 #controls label:hover {
   background-color: #ffffff;
   cursor: pointer;
+}
+
+#controls label:hover .chaild-baground-label {
+  border: 1px solid #ffffff;
+}
+
+#controls label:active {
+  background-color: #a99b9b;
 }
 
 #inp1:checked ~ #controls .chaild-baground-label1,
@@ -136,7 +141,7 @@ body {
   display: flex;
   align-items: center;
   max-width: 20rem;
-  font-size: 16px;
+  font-size: 1rem;
   gap: 5rem;
   overflow: hidden;
 }
@@ -211,4 +216,55 @@ body {
   #wrap-text {
     margin: auto 0;
 }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-rows: 10rem 2rem 2rem;
+    max-width: 19rem;
+    row-gap: 1.5rem;
+  }
+
+  .slider {
+    width: 19rem;
+  }
+  
+  .images {
+    width: 19rem;
+  }
+  
+  .img {
+    width: 19rem;
+  }
+
+  #controls {
+    column-gap: 1.5rem;
+  }
+
+  #controls .baground-label {
+    min-width: 2rem;
+    height: 2rem;
+  }
+
+  .box-text {
+    max-width: 18rem;
+    gap: 5rem;
+  }
+
+
+  #inp1:checked ~ #wrap-text .text1 {
+    margin-left: 0;
+  }
+  
+  #inp2:checked ~ #wrap-text .text2 {
+    margin-left: -96%;
+  }
+  
+  #inp3:checked ~ #wrap-text .text3 {
+    margin-left: -216%;
+  }
+  
+  #inp4:checked ~ #wrap-text .text4 {
+    margin-left: -380%;
+  }
 }

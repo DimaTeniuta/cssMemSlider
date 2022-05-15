@@ -122,7 +122,7 @@ body {
   height: 1rem;
   border-radius: 50%;
   background-color: #444444;
-  border: 1px solid #3369a6;
+  border: 0.1rem solid #3369a6;
   box-sizing: border-box;
   opacity: 0;
   transition: 0.3s;
@@ -134,7 +134,7 @@ body {
 }
 
 #controls label:hover .chaild-baground-label {
-  border: 1px solid #ffffff;
+  border: 0.1rem solid #ffffff;
 }
 
 #controls label:active {

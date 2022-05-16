@@ -37,7 +37,7 @@ body {
   grid-template-rows: 1fr 5rem;
   grid-row-gap: 2rem;
   max-width: 60rem;
-  padding: 0 5% 0 5%;
+  padding: 0 5% 2% 5%;
   margin: 0 auto;
 }
 
@@ -201,8 +201,8 @@ body {
                          "control"
                          "tex";
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2rem 2rem;
-    row-gap: 2rem;
+    grid-template-rows: 1fr 2rem 6rem;
+    row-gap: 1.5rem;
   }
 
   #controls {
@@ -215,10 +215,6 @@ body {
   #controls .baground-label {
     min-width: 2.5rem;
     height: 2.5rem;
-  }
-
-  #wrap-text {
-    margin: auto 0;
   }
 }
 

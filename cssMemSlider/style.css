@@ -33,12 +33,11 @@ body {
   display: grid;
   grid-template-areas: "slide slide"
                        "tex control";
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 34rem 5rem;
-  max-width: 50rem;
-  padding: 2% 0 0 0;
-  row-gap: 2rem;
-  height: 100vh;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 1fr 5rem;
+  grid-row-gap: 2rem;
+  max-width: 60rem;
+  padding: 0 5% 0 5%;
   margin: 0 auto;
 }
 
@@ -48,8 +47,8 @@ body {
 
 .slider {
   grid-area: slide;
+  width: 100%;
   margin: 0 auto;
-  width: 50rem;
   overflow: hidden;
   border-radius: 1rem;
 }
@@ -57,12 +56,14 @@ body {
 .images {
   display: flex;
   margin: 0 auto;
-  width: 50rem;
+  width: 400%;
 }
 
 .img {
-  width: 50rem;
-  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 1rem;
 }
 
 #inp1:checked ~ .slider > .images {
@@ -200,27 +201,15 @@ body {
                          "control"
                          "tex";
     grid-template-columns: 1fr;
-    grid-template-rows: 20rem 2rem 2rem;
-    max-width: 30rem;
+    grid-template-rows: 1fr 2rem 2rem;
     row-gap: 2rem;
-  }
-
-  .slider {
-    width: 30rem;
-  }
-  
-  .images {
-    width: 30rem;
-  }
-  
-  .img {
-    width: 30rem;
   }
 
   #controls {
     column-gap: 2rem;
+    align-items: center;
     max-width: 30rem;
-    margin: auto auto;
+    margin: 0 auto;
   }
 
   #controls .baground-label {
@@ -230,42 +219,19 @@ body {
 
   #wrap-text {
     margin: auto 0;
-}
+  }
 }
 
 @media (max-width: 500px) {
-  .wrapper {
-    grid-template-rows: 10rem 2rem 2rem;
-    max-width: 19rem;
-    row-gap: 1.5rem;
-  }
-
-  .slider {
-    width: 19rem;
-  }
-  
-  .images {
-    width: 19rem;
-  }
-  
-  .img {
-    width: 19rem;
-  }
-
-  #controls {
-    column-gap: 1.5rem;
-  }
 
   #controls .baground-label {
-    min-width: 2rem;
-    height: 2rem;
+    min-width: 1.5rem;
   }
 
   .box-text {
     max-width: 18rem;
     gap: 5rem;
   }
-
 
   #inp1:checked ~ #wrap-text .text1 {
     margin-left: 0;
